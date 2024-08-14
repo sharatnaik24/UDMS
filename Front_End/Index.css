@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+html {
+    align-items: normal;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: #f0f0f0; 
+    display: flex;
+    background-image: url(images/zhanhui-li-1iuxWsIZ6ko-unsplash.jpg);
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding-top: 120px;
+    overflow-x: hidden; 
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 21%;
+    background: linear-gradient(135deg, #dd1717, #00D4FF);
+    color: rgb(23, 11, 11);
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000; 
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background: linear-gradient(135deg, #e7c1c1, #007BFF);
+}
+
+header h1 {
+    font-size: 3.5em;
+    margin: 0;
+}
+
+header h2 {
+    font-size: 1.5em;
+    margin: 5px 0 0 0;
+    font-weight: normal;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background: #555;
+}
+
+.nav-left {
+    display: flex;
+}
+
+.nav-left li {
+    margin: 0 10px;
+}
+
+.nav-right {
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-right li {
+    margin: 0 5px;
+}
+
+main {
+    padding: 20px;
+    position: relative;
+}
+
+.side-section {
+    position: fixed;
+    top: 120px;
+    
+    bottom: 0;
+    width: 300px;
+    background: rgba(174, 178, 163, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-y: auto;
+    display: none;
+    z-index: 999;
+    border-radius: 5px;
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    align-self:center;
+}
+.side-section h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ce7138;
+    font-size: x-large;
+}
+
+#about-section {
+    left: 0;
+}
+
+#contact-section {
+    right: 0;
+}
+
+.form-container {
+    background: linear-gradient(135deg,  #347560,#414242);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.form-container .input-container {
+    position: relative;
+    margin: 10px 0;
+}
+
+.form-container input,
+.form-container select,
+.form-container button {
+    width: calc(100% - 25px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-container select {
+    width: calc(100% - 25px);
+    align-self: center;
+}
+
+.form-container button {
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background: #555;
+}
+
+.form-container p {
+    margin-top: 10px;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    display: block;
+    flex-direction: column;
+}
+
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    width: 100px;
+    align-self: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.eye-symbol {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px; 
+}
+
+#footer {
+    padding-bottom: 10px;
+    
+}

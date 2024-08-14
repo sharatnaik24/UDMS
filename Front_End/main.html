@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to UDMS</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> 
+</head>
+<body>
+    <header>
+        <h1>Welcome to UDMS</h1>
+    </header>
+    <nav class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn" id="menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M3 6h18M3 12h18M3 18h18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="dropdown-content" id="dropdown-content">
+                <a href="#" data-target="faculty">Faculty</a>
+                <a href="#" data-target="courses">Courses</a>
+                <a href="#" data-target="students">Students</a>
+                <a href="#" data-target="subjects">Subjects</a>
+                <a href="#" data-target="attendance">Attendance</a>
+                <a href="#" data-target="results">Results</a>
+                <a href="#" data-target="feedback">Feedbacks</a>
+            </div>
+        </div>
+    </nav>
+    <div class="profile-section">
+        <img src="images/profile.png" alt="Profile Icon" class="profile-icon">
+        <span id="role-display"></span>
+        <span id="username-display"></span>
+    </div>
+    <main>
+        <section id="faculty" class="content-section" style="display: none;">
+            <h2>Faculty Information</h2>
+            <div class="options">
+                <button type="button" id="getallFaculty">All Faculty Members</button>
+                <button type="button" id="getFaculty">Faculty Detials</Details></button>
+                <button type="button" id="createFaculty">Add Faculty</button>
+                <button type="button" id="updateFaculty">Update Details</button>
+                <button type="button" id="deleteFaculty">Remove faculty</button>
+            </div>
+            <div id="content">
+                <!-- <p>Content for Faculty section.</p> -->
+                <div id="faculty-input-fields" class="input-fields"style="display: none;">
+                    <input type="text" id="ProfessorId" placeholder="Prof_ID" style="display: none;">
+                    <input type="text" id="Name" placeholder="Name" style="display: none;">
+                    <input type="text" id="Qualification" placeholder="Qualification" style="display: none;">
+                    <input type="email" id="Email" placeholder="Email" style="display: none;">
+                    <input type="tel" id="Mobile" placeholder="Mobile" style="display: none;">
+                    <button id="submitFaculty" style="display: none;">Submit</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="courses" class="content-section" style="display: none;">
+            <h2>Courses Information</h2>
+            <div class="options">
+                <button type="button" id="getAllCourses">Available Courses</button>
+                <button type="button" id="getCourse">Course Details</button>
+                <button type="button" id="createCourse">Add Course</button>
+                <button type="button" id="updateCourse">Modify Course</button>
+                <button type="button" id="deleteCourse">Remove Course</button>
+            </div>
+            <div id="content">
+                <!-- <p>Content for Courses section.</p> -->
+                <div id="course-input-fields" class="input-fields" style="display: none;">
+                    <input type="text" id="courseName" placeholder="Course Name" style="display: none;">
+                    <input type="text" id="subject1Id" placeholder="Subject 1 code" style="display: none;">
+                    <input type="text" id="subject2Id" placeholder="Subject 2 code" style="display: none;">
+                    <input type="text" id="subject3Id" placeholder="Subject 3 code" style="display: none;">
+                    <input type="text" id="subject4Id" placeholder="Subject 4 code" style="display: none;">
+                    <button id="submitCourse" style="display: none;">Submit</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="students" class="content-section" style="display: none;">
+            <h2>Students Information</h2>
+            <div class="options">
+                <button type="button" id="getAllStudents">All Students</button>
+                <button type="button" id="getStudent">Student Details</button>
+                <button type="button" id="createStudent">New Admission</button>
+                <button type="button" id="updateStudent">Alter Admission Details</button>
+                <button type="button" id="deleteStudent">Remove Student</button>
+            </div>
+            <div id="content">
+                <!-- <p>Content for Students section.</p> -->
+                <div id="student-input-fields" class="input-fields" style="display: none;">
+                    <input type="text" id="regNo" placeholder="Registration Number" style="display: none;">
+                    <input type="text" id="name" placeholder="Name" style="display: none;">
+                    <input type="text" id="mobNo" placeholder="Mobile Number" style="display: none;">
+                    <input type="email" id="email" placeholder="Email" style="display: none;">
+                    <input type="text" id="courseNameForAdmission" placeholder="Course Name" style="display: none;">
+                    <button id="submitStudent" style="display: none;">Submit</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="subjects" class="content-section" style="display: none;">
+            <h2>Subjects Information</h2>
+            <div class="options">
+                <button type="button" id="getallSubjects">Available Subjects</button>
+                <button type="button" id="getSubject">Subject Info</button>
+                <button type="button" id="createSubject">Add Subject</button>
+                <button type="button" id="updateSubject">Modify Sub Info</button>
+                <button type="button" id="deleteSubject">Remove Sub</button>
+            </div>
+            <div id="content">
+                <!-- <p>Content for Subject section</p> -->
+                <div id="subject-input-fields" class="input-fields"style="display: none;">
+                    <input type="text" id="SubjectCode" placeholder="SubjectCode" style="display: none;">
+                    <input type="text" id="SubName" placeholder="SubName" style="display: none;">
+                    <select id="SubType">
+                        <option value="S">S</option>
+                        <option value="H">H</option>
+                    </select style="display: none;">
+                    <input type="text" id="ProfId" placeholder="ProfId" style="display: none;">
+                    <button id="submitSubject" style="display: none;">Submit</button>
+                </div>
+            </div>
+        </section>
+        <section id="attendance" class="content-section" style="display: none;">
+            <h2>Attendance</h2>
+            <div class="options">
+                <button id="getall">Attendance Statement</button>
+                <button id="get">Attendance of a Class</button>
+                <button id="GetByReg">Total absence of a Student</button>
+                <button id="create">Upload Attendance</button>
+                <button id="update">Modify</button>
+                <button id="delete">Remove</button>
+            
+            </div>
+            <div id="content">
+                <!-- <p>Content for Attendance section.</p> -->
+                <div id="attendance-input-fields" class="input-fields" display: none;">
+                    <input type="text" id="AttendanceId" placeholder="Attendance ID" style="display: none;">
+                    <input type="date" id="Date" placeholder="Date" style="display: none;">
+                    <input type="text" id="SubId" placeholder="Subject ID" style="display: none;">
+                    <input type="text" id="course" placeholder="Course" style="display: none;">
+                    <input type="number" id="present" placeholder="Total Present Students" style="display: none;">
+                    <input type="number" id="absent" placeholder="Total Absent Students" style="display: none;">
+                    <input type="text" id="studentabsentList" placeholder="Absent Students List" style="display: none;">
+                    <input type="text" id="reg" placeholder="Registration Number" style="display: none;">
+                    <button id="submit" style="display: none;">Submit</button>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section id="feedback" class="content-section" style="display: none;">
+            <h2>Feedback Information</h2>
+            <div class="options">
+                <button type="button" id="getAllFeedback">All Feedbacks</button>
+                <button type="button" id="getFeedback">Your Feedback Details</button>
+                <button type="button" id="createFeedback">Give Feedback</button>
+                <button type="button" id="updateFeedback">Alter</button>
+                <button type="button" id="deleteFeedback">Delete</button>
+            </div>
+            <div id="content">
+                <!-- <p>Content for Feedback section.</p> -->
+                <div id="feedback-input-fields" class="input-fields" style="display: none;">
+                    <input type="text" id="feedbackId" placeholder="Feedback ID" style="display: none;">
+                    <input type="text" id="professorIdForFeedback" placeholder="Professor ID" style="display: none;">
+                    <input type="text" id="courseNameForFeedback" placeholder="Course Name" style="display: none;">
+                    <textarea id="Feedback" placeholder="Feedback" style="display: none;"></textarea>
+                    <button id="submitFeedback" style="display: none;">Submit</button>
+                </div>
+            </div>
+        </section>
+        <section id="results" class="content-section" style="display: none;">
+            <h2>Results Information</h2>
+            <div class="options">
+                <button type="button" id="getAllResults">Results</button>
+                <button type="button" id="getResult">Your Result</button>
+                <button type="button" id="createResult">Upload Result</button>
+                <button type="button" id="updateResult">Modify</button>
+                <button type="button" id="deleteResult">Remove a result</button>
+            </div>
+            <div id="content">
+                <!-- <p>Content for Results section.</p> -->
+                <div id="result-input-fields" class="input-fields" style="display: none;">
+                    <input type="text" id="regNoForResult" placeholder="Registration Number" style="display: none;">
+                    <input type="number" id="marks1" placeholder="Marks 1" style="display: none;">
+                    <input type="number" id="marks2" placeholder="Marks 2" style="display: none;">
+                    <input type="number" id="marks3" placeholder="Marks 3" style="display: none;">
+                    <input type="number" id="marks4" placeholder="Marks 4" style="display: none;">
+                    <button id="submitResult" style="display: none;">Submit</button>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <div id="responseModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+    <script  src="main.js"></script>
+</body>
+</html>

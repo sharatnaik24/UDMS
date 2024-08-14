@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDMS</title>
+    <link rel="stylesheet" href="Index.css">
+</head>
+<body>
+    <header>
+        <h1>UDMS</h1>
+        <h2>University Details Management System</h2>
+        <nav>
+            <ul>
+                <div class="nav-left">
+                    <li><a href="#" onclick="showSection('home')">Home</a></li>
+                    <li><a href="#" onclick="showSection('about')">About</a></li>
+                    <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+                </div>
+                <div class="nav-right">
+                    <li><a href="#" onclick="showLogin()">Login</a></li>
+                    <li><a href="#" onclick="showSignUp()">Sign Up</a></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="about-section" class="side-section">
+            <h2>About UDMS</h2>
+            <p>
+                A unique initiative, the University Details Management System (UDMS) is designed to streamline and integrate the operations and governance of a  university or institution. This system centralizes data management within the institution, ensuring uniformity and efficiency in the administration of higher education. UDMS benefits students, faculty, and administrators by providing a unified platform for managing academic details, improving accessibility, and enhancing the overall educational experience.            </p>
+        </div>
+        <div id="contact-section" class="side-section">
+            <h2>Contact Us</h2>
+            <p>
+                <strong>Phone Numbers:</strong> 9980545991, 8497025839, 9353497697, 9964306346, 9448207157<br>
+                <strong>Timings:</strong> 10 AM to 6 PM (On all Govt. working days)<br>
+                <strong>Email:</strong> udms.helpdesk@gmail.com
+            </p>
+        </div>
+        <div class="form-container" id="login-container" style="display: none;">
+            <h2>Login</h2>
+            <form id="login-form" action="main.html">
+                <div class="input-container">
+                    <input type="text" id="login-username" placeholder="Username" required>
+                </div>
+                <div class="input-container">
+                    <input type="password" id="login-password" placeholder="Password"
+                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" 
+                     title="Must contain at least one number, one uppercase and lowercase letter, one special character, and at least 8 or more characters" 
+                     required>
+                    <span class="eye-symbol" onclick="togglePasswordVisibility('login-password')">&#128065;</span>
+                </div>
+                <button type="submit" >Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" onclick="showSignUp()">Sign Up</a></p>
+        </div>
+
+        <div class="form-container" id="signup-container" style="display: none;">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <div class="input-container">
+                    <input type="text" id="signup-userId" placeholder="Reg_No/Prof_Id" required>
+                    
+                    
+                </div>
+                <div class="input-container">
+                    
+                    <input type="text" id="signup-username" placeholder="Username" required>
+                    
+                </div>
+                
+                <div class="input-container">
+                    <input type="password" id="signup-password" placeholder="Password" 
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" 
+                    title="Must contain at least one number, one uppercase and lowercase letter, one special character, and at least 8 or more characters"  required>
+                    <span class="eye-symbol" onclick="togglePasswordVisibility('signup-password')">&#128065;</span>
+                </div>
+                <div class="input-container">
+                    <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                    <span class="eye-symbol" onclick="togglePasswordVisibility('confirm-password')">&#128065;</span>
+                </div>
+                <select id="signup-role" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="STUDENT">Student</option>
+                    <option value="PROFESSOR">Professor</option>
+                </select>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </div>
+    </main>
+    <script src="Index.js"></script>
+</body>
+</html>
