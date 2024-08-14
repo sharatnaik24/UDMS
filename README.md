@@ -68,10 +68,10 @@ The **University Details Management System (UDMS)** is a comprehensive web appli
 
 1. Clone the repository:
 
-   \`\`\`bash
+   ```bash
    git clone https://github.com/unknownuuu/UDMS.git
    cd UDMS
-   \`\`\`
+   ```
 
 2. Configure MySQL:
 
@@ -83,24 +83,24 @@ The **University Details Management System (UDMS)** is a comprehensive web appli
 
    Create a \`.env\` file in the root directory and add the following:
 
-   \`\`\`plaintext
+   ```plaintext
    SPRING_DATASOURCE_URL=jdbc:mysql://localhost:3306/udms_db
    SPRING_DATASOURCE_USERNAME=<username>
    SPRING_DATASOURCE_PASSWORD=<password>
    SPRING_JPA_HIBERNATE_DDL_AUTO=update
-   \`\`\`
+   ```
 
 4. Build the project:
 
-   \`\`\`bash
+   ```bash
    mvn clean install
-   \`\`\`
+   ```
 
 5. Run the application:
 
-   \`\`\`bash
+   ```bash
    mvn spring-boot:run
-   \`\`\`
+  ```
 
 6. Access the Frontend:
 
@@ -122,9 +122,9 @@ A Postman collection is included in the repository. Import \`UDMS.postman_collec
 
 The project includes unit and integration tests using Mockito and JUnit. To run the tests, use the following command:
 
-\`\`\`bash
+```bash
 mvn test
-\`\`\`
+```
 
 ## Security
 
