@@ -3,9 +3,7 @@
 
 ## Overview
 
-The **University Details Management System (UDMS)** is a comprehensive web application designed to manage and streamline various administrative and academic operations within a university. The application features a modern and responsive frontend along with a robust backend built using the Java Spring Boot framework. Data is securely managed and stored in a MySQL database.
-
-## Features
+The **University Details Management System (UDMS)** is a web application designed to manage and streamline various administrative and academic operations within a university. The backend is built using the Java Spring Boot framework, providing a scalable and secure solution. Data is securely managed and stored in a MySQL database.
 
 - **Admin Module**:
   - Create, read, update, and delete student, course, and professor records.
@@ -76,12 +74,12 @@ The **University Details Management System (UDMS)** is a comprehensive web appli
 2. Configure MySQL:
 
    - Install MySQL Server if not already installed.
-   - Create a database named \`udms_db\`.
+   - Create a database named `udms_db`.
    - Create a user with appropriate permissions and set the password.
 
 3. Set up environment variables:
 
-   Create a \`.env\` file in the root directory and add the following:
+   Create a `.env` file in the root directory and add the following:
 
    ```plaintext
    SPRING_DATASOURCE_URL=jdbc:mysql://localhost:3306/udms_db
@@ -100,12 +98,11 @@ The **University Details Management System (UDMS)** is a comprehensive web appli
 
    ```bash
    mvn spring-boot:run
-  ```
-
+   ```
 6. Access the Frontend:
 
    - Open a web browser and navigate to \`http://localhost:8080/\` to interact with the application.
-
+     
 ### API Endpoints
 
 The API is documented using Swagger. Once the application is running, you can access the API documentation at:
@@ -116,7 +113,7 @@ The API is documented using Swagger. Once the application is running, you can ac
 
 #### Postman
 
-A Postman collection is included in the repository. Import \`UDMS.postman_collection.json\` into Postman to test the API endpoints.
+A Postman collection is included in the repository. Import `UDMS.postman_collection.json` into Postman to test the API endpoints.
 
 #### Unit Tests
 
@@ -136,4 +133,4 @@ Contributions are welcome! Please open an issue or submit a pull request.
 
 ## Contact
 
-If you have any questions or feedback, please reach out to us at \`sharatnaik369@gmail.com\`.
+If you have any questions or feedback, please reach out to us at `sharatnaik369@gmail.com`.
